@@ -1,0 +1,9 @@
+[Unit]
+Description=Eclipse Monitoring — следит за заявками панели на обновление
+
+[Path]
+PathExistsGlob=/opt/34vpn-full/.eclipse-update/*.request
+Unit=eclipse-update.service
+
+[Install]
+WantedBy=multi-user.target

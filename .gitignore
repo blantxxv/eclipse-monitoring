@@ -1,0 +1,17 @@
+# Секреты и локальное состояние — никогда не коммитим
+deploy/.env
+.eclipse-update/
+ADMIN-CREDENTIALS.txt
+*.pem
+*.key
+
+# Зависимости и сборка
+node_modules/
+.next/
+dist/
+build/
+
+# Мусор
+*.log
+.DS_Store
+Thumbs.db

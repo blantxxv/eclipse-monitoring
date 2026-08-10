@@ -1,0 +1,1 @@
+module.exports = { reactStrictMode: true, async rewrites() { return [{source:'/api/:path*',destination:'http://backend:3406/api/:path*'},{source:'/install.sh',destination:'http://backend:3406/install.sh'},{source:'/agent.py',destination:'http://backend:3406/agent.py'}]; } };

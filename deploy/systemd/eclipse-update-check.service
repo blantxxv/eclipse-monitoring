@@ -1,0 +1,7 @@
+[Unit]
+Description=Eclipse Monitoring — плановая проверка обновлений
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/eclipse-update check

@@ -1,0 +1,10 @@
+# Скрипты и конфиги всегда с LF: иначе bash на Linux падает на \r
+*.sh      text eol=lf
+*.py      text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.service text eol=lf
+*.path    text eol=lf
+*.timer   text eol=lf
+Dockerfile text eol=lf
+.env.example text eol=lf

@@ -1,0 +1,10 @@
+[Unit]
+Description=Eclipse Monitoring — проверять обновления раз в 30 минут
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=30min
+Unit=eclipse-update-check.service
+
+[Install]
+WantedBy=timers.target

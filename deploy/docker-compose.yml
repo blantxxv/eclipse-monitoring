@@ -1,0 +1,56 @@
+services:
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      NODE_ENV: "production"
+      PANEL_PUBLIC_URL: "${PANEL_PUBLIC_URL}"
+      AGENT_API_PORT: "3406"
+      DATABASE_URL: "postgresql://eclipse:${POSTGRES_PASSWORD}@postgres:5432/eclipse"
+      JWT_SECRET: "${JWT_SECRET}"
+      AGENT_SECRET_ENCRYPTION_KEY: "${AGENT_SECRET_ENCRYPTION_KEY}"
+      ADMIN_EMAIL: "${ADMIN_EMAIL}"
+      ADMIN_PASSWORD: "${ADMIN_PASSWORD}"
+      CORS_ORIGIN: "${PANEL_PUBLIC_URL}"
+      ENROLLMENT_TOKEN_TTL_MINUTES: "15"
+      METRICS_INTERVAL_SECONDS: "5"
+      METRICS_RETENTION_MINUTES: "120"
+      # Каталог состояния обновлений. Пишет бэкенд, читает хостовый апдейтер —
+      # docker.sock внутрь контейнера не пробрасывается специально.
+      UPDATE_STATE_DIR: "/var/eclipse-update"
+    volumes:
+      - ../.eclipse-update:/var/eclipse-update
+    ports:
+      - "127.0.0.1:3406:3406"
+    depends_on:
+      - postgres
+      - redis
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: "eclipse"
+      POSTGRES_USER: "eclipse"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+
+volumes:
+  pgdata:
