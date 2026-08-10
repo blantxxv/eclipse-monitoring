@@ -1,3 +1,37 @@
+<!-- ─────────────────────────  ШАПКА  ───────────────────────── -->
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="290">
+<a href="https://t.me/Light_Eclipse">
+<img src=".github/assets/eclipse.jpg" width="104" height="104" alt="Eclipse"><br>
+<b>Eclipse</b>
+</a><br>
+<sub>канал автора проекта</sub><br><br>
+<a href="https://t.me/Light_Eclipse">
+<img src="https://img.shields.io/badge/Telegram-Light__Eclipse-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
+</a>
+</td>
+<td align="center" width="290">
+<a href="https://t.me/Sity34_bot?start=par_692295675vtees">
+<img src=".github/assets/34vpn.jpg" width="104" height="104" alt="34 VPN"><br>
+<b>34 VPN</b>
+</a><br>
+<sub>спонсор проекта</sub><br><br>
+<a href="https://t.me/Sity34_bot?start=par_692295675vtees">
+<img src="https://img.shields.io/badge/%D0%A1%D0%BF%D0%BE%D0%BD%D1%81%D0%BE%D1%80-34%20VPN-8A2BE2?style=for-the-badge&logo=telegram&logoColor=white" alt="Спонсор">
+</a>
+</td>
+</tr>
+</table>
+
+<a href="https://github.com/blantxxv/eclipse-monitoring"><img src="https://visitor-badge.laobi.icu/badge?page_id=blantxxv.eclipse-monitoring&left_text=%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D1%8B&left_color=%230e1218&right_color=%233ddc97" alt="Просмотры"></a>
+
+</div>
+
+<!-- ──────────────────────────────────────────────────────────── -->
+
 # Eclipse Monitoring
 
 Панель мониторинга серверов: состояние нод, нагрузка, трафик, подключения, мосты HAProxy,
