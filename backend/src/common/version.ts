@@ -1,8 +1,8 @@
 // Single source of truth for panel / agent versions.
 // BUILD_HASH / BUILD_TIME are injected at deploy time via env; fall back to 'dev'.
 
-export const BACKEND_VERSION = '1.6.5';
-export const FRONTEND_VERSION = '1.6.5';
+export const BACKEND_VERSION = '2.0.0';
+export const FRONTEND_VERSION = '2.0.0';
 
 // Latest agent version the panel ships (served at /agent.py). Servers reporting
 // an older version are considered outdated and offered an update.
